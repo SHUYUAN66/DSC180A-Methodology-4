@@ -4,7 +4,7 @@
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
 # ucsdets/datascience-notebook:2020.2-stable
-ARG BASE_CONTAINER= shuyuan66/dsc180-methodology-4/tags
+ARG BASE_CONTAINER= shuyuan66/dsc180-methodology-4/datascience-notebook:2020.2-stable
 
 # scipy/machine learning (tensorflow)
 # https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
