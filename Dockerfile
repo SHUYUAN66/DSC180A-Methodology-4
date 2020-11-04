@@ -3,7 +3,8 @@
 
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
-ARG BASE_CONTAINER=ucsdets/datascience-notebook:2020.2-stable
+# ucsdets/datascience-notebook:2020.2-stable
+ARG BASE_CONTAINER= ucsdets/datascience-notebook:2020.2-stable
 
 # scipy/machine learning (tensorflow)
 # https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
@@ -16,8 +17,9 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN	apt-get install htop
-
+RUN	apt-get install aria2
+RUN apt-get install nmap
+RUN apt-get install traceroute
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain
 
