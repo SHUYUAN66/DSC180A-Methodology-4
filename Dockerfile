@@ -3,7 +3,7 @@
 
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
-ARG BASE_CONTAINER=ucsdets/datascience-notebook:2020.2-stable
+ARG BASE_CONTAINER=ucsdets/rl-notebook:2020.2-stable
 
 # scipy/machine learning (tensorflow)
 # https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
@@ -15,6 +15,10 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 # 2) change to root to install packages
 USER root
+
+Run -it --rm --gpus device=GPU-3a23c669-1f69-c64e-cf85-44e9b07e7a2a ubuntu nvidia-smi
+
+Run apt-get install nvidia-container-runtime
 
 RUN apt-get install -y aria2
 
